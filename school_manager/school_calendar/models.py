@@ -4,7 +4,7 @@ from schools.models import School, Course, Location
 from dateutil.rrule import *
 from datetime import datetime, timedelta
 from django.utils.timezone import utc
-from django.forms.util import from_current_timezone
+from django.forms.utils import from_current_timezone
 
 # Create your models here.
 

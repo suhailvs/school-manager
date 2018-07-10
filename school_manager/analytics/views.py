@@ -10,13 +10,14 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.forms.models import model_to_dict
 
+"""
 import random
 import numpy as np
 import pandas as pd
 
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
-
+"""
 from schools.models import School  #, Course, Location
 from analytics.models import Analysis
 
@@ -36,7 +37,7 @@ def simple_chart(request):
     """
     The first try at creating analytics 
     server side with matplotlib
-    """
+    
 
     # Get the specific model field names that will appear
     # on the X axis    
@@ -107,7 +108,8 @@ def simple_chart(request):
     # including HTTP headers, cookies and body content
     response = HttpResponse(content_type='image/png')
     canvas.print_png(response)
-    return response
+    """
+    return HttpResponse('image/png')
 
 
 class LoginRequiredMixin(object):
